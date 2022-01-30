@@ -2,7 +2,7 @@
 ssh devops@192.168.29.81 
 git log --oneline -n1 # this will give you the SHA
 git checkout master 
-git merge ${commit-sha}
+git push 
 
 npm install --production
 pm2 restart all
