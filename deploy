@@ -2,8 +2,8 @@
 ssh devops@192.168.29.81 <<EOF
  git clone https://github.com/trajeshk/node-app.git
  apt-get update --fix-missing 
- sudo  apt install -y npm
- npm install — production
+ apt-get install -y npm
+ npm install pm2 -g
  pm2 restart all
  exit
 EOF
