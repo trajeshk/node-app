@@ -1,10 +1,8 @@
-#!/bin/bash
-ssh devops@192.168.29.81 
-git log --oneline -n1 # this will give you the SHA
-git checkout master 
-git push 
-
-npm install --production
-pm2 restart all
-exit
+#!/bin/sh
+ssh devops@192.168.29.81 <<EOF
+ cd ~/node-app
+ git pull
+ npm install — production
+ pm2 restart all
+ exit
 EOF
