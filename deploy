@@ -1,6 +1,7 @@
 #!/bin/sh
 ssh devops@192.168.29.81 <<EOF
  cd ~/node-app
+ git push -f origin master
  git pull
  npm install — production
  pm2 restart all
