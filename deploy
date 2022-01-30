@@ -1,7 +1,9 @@
 #!/bin/bash
 ssh devops@192.168.29.81 
-git branch --set-upstream-to=origin/master master
-git pull
+git log --oneline -n1 # this will give you the SHA
+git checkout master 
+git merge ${commit-sha}
+
 npm install --production
 pm2 restart all
 exit
